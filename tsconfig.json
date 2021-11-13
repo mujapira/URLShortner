@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "moduleResolution": "node",
+        "target": "ES6",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "allowSyntheticDefaultImports":true,
+        "sourceMap":true,
+        "noEmit": false,
+        "noEmitOnError": false,
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "preserveConstEnums":true,
+        "lib": ["ES6", "DOM", "ES2017", "ES7"],
+        "resolveJsonModule": true,
+    } 
+}
