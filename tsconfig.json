@@ -16,5 +16,7 @@
         "preserveConstEnums":true,
         "lib": ["ES6", "DOM", "ES2017", "ES7"],
         "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
     } 
 }
