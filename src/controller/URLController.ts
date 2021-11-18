@@ -10,7 +10,7 @@ export class URLController {
         const url = await URLModel.findOne({ originURL })
         if (url) {
             response.json(url)
-            ReadableStreamDefaultController
+            return
         }
         //Criar HASH
         const hash = shortId.generate()
@@ -24,10 +24,12 @@ export class URLController {
     public async redirect(req: Request, response: Response): Promise<void> {
         const { hash } = req.params
         const url = await URLModel.findOne({ hash })
+
         if (url) {
             response.redirect(url.originURL)
             return
         }
-        response.status(400).json({error:"deu ruim"})
+        
+        response.status(400).json({ error: "deu ruim" })
     }
 }

@@ -4,7 +4,9 @@ import express from 'express';
 
 const api = express();
 api.use(express.json());
+
 const database = new MongoConnection();
+database.connect()
 const urlController = new URLController();
 
 api.post('/shorten', urlController.shorten);
